@@ -1,2 +1,45 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<div class="detail-pos">
+
+  <div class="detail-pay border-details">
+    <div class="information">
+
+    </div>
+    <div class="">
+
+      <%= form_tag "/search/create", method: :get, remote: true, id: "search-form" do %>
+      <%= text_field_tag :keyword, nil, placeholder: " Qué estás buscando" %>
+      <%= content_tag :button, type: :submit do %>
+      Buscar
+      <% end %>
+      <% end %>
+
+    </div>
+
+  </div>
+  <div class="detail-buy border-details">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <%= 20.times do %>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
