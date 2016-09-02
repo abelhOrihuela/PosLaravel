@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'products/index'
+  get 'search/create'
+
+resources :products
 
   devise_for :users
   get 'welcome/index'
